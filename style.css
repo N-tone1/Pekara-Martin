@@ -1,0 +1,648 @@
+* {box-sizing:border-box}
+
+
+body{
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  }
+
+
+
+.nav{
+ 
+  position: absolute;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+
+}
+
+.nav li:hover{
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+}
+.container{
+  display:flex;
+  align-items: center;
+  background-color: gray;
+  
+}
+
+.container label , #hamburger{display: none;}/*sakrivena checkbox*/
+
+
+
+h1 a{
+  text-decoration: none;
+  display:inline-block;
+  color: white;
+  margin-left: 10px;
+  }
+  .container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container li {
+    margin-right: 20px; /* Adjust the margin as needed for the desired spacing */
+}
+.image-logo{
+  width: 50px;
+ height: auto;
+ border-radius: 50%;
+ margin-left: 10px;
+}
+.logo{
+  display: flex;
+  margin-left: 50%;
+  align-items: center;
+
+}
+#myLinks{
+  width: auto;
+  display: flex;
+  
+}
+ul{
+ padding: 0;
+  list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+  color: white;
+
+}
+ul li{
+  display: flex;
+  padding: 5px;
+}
+
+/* Adjust the main photo to be 70% of the viewport width */
+.main-photo img {
+ overflow: hidden;
+ object-fit: cover;
+ 
+
+
+}
+.main-photo{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 70%;
+  text-align: center;
+  overflow:hidden;
+
+
+}
+.main-text {
+  font-size: 2rem;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position:absolute;
+ 
+}
+
+.zajednicki-frame{
+  display: flex;
+  flex-wrap: wrap;
+  width: 99vw;
+  height: calc(100vh-58px);
+}
+.slide-show {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: calc(100vh-58px);
+  align-items: center;
+  overflow: hidden; /* Ensure that the overflow is hidden to hide extra images */
+  position: relative;
+}
+
+.image-box {
+  margin: 0;
+  display: flex;
+  width: 100%; /* Take up the full width of the slideshow */
+  height: 100%;
+  transition: transform 6s ease-in-out;
+
+
+}
+
+.image-box img {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Change back to cover for better fitting */
+  width: 100%;
+  max-height: 100%;
+
+}
+/* arrows, left and right*/
+.prev, .next {
+
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-left: 0;
+  width: auto;
+  margin-top: -22px;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev{
+  left:0%;
+  border-radius: 3px 0 0 3px;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8)!important;
+    /* Add any other styles you want for the hover effect */
+}
+video{
+ margin-top: 100px;
+   display: none;/*video je skriven sada, makni none ako ga želiš prikazati*/
+   background-size: cover;
+
+}
+
+
+/* Add this to your existing CSS or replace your existing .about-container styles */
+
+.about-container {
+  background-color:#F5F5F5;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding: 20px; /* Adjust padding as needed */
+  border-radius: 10px; /* Optional: Add rounded corners to the text container */
+  text-align: center;
+}
+
+
+#right-image {
+  
+  float: left;
+  width: 600px; /* Adjust the width of your images */
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Optional: Add rounded corners to the images */
+ margin-right: 10px;
+  object-fit: cover;
+
+}
+
+.about-container h2 {
+width: 100%;
+ justify-content: center;
+  font-size: 30px;
+  text-align: justify;
+  text-align: center;
+  color: black; /* Change the color of h2 */
+  margin-top: 70px; /* Remove default margin */
+ 
+}
+
+.about-container p {
+flex-wrap: wrap;
+  font-size: 22px;
+  font-weight: 200;
+  margin-right: 10px;
+  line-height: 1.8;
+  text-align: justify;
+  color: black; /* Change the color of p */
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 10px; 
+  border-radius: 10px;
+ }
+ .text-about{
+  text-shadow: #A9A9A9;
+  flex: 1;
+  flex: 200px;
+  width: 600px;
+  height: auto;
+ }
+
+ #o-nama{
+  display: flex;
+
+ }
+
+.menu-container{
+  border-radius: 10px;
+  color: black;
+  background-color:#F5F5F5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+
+}
+.menu{
+
+  text-align: center;
+  display: flex;
+  gap: 200px;
+  height: auto;
+
+}
+.artikli-kruh{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #A9A9A9;
+  border-radius: 8px;
+
+}
+.menu-container h1{
+  text-align: center;
+  width: 100%;
+color: black;
+}
+.menu h2{
+  text-align: center;
+  margin-top: 0;
+  color: black;
+  background-color: #A9A9A9;
+  border-radius: 20px;
+
+}
+.menu ul{
+  display: flex;
+  flex-direction: column;
+  color: black;
+  
+
+ }
+ .menu li{
+  background-color: #A9A9A9;
+  line-height: 1.8;
+  text-align: center;
+  font-size: 20px;
+
+ }
+
+/*nastavi lijepo rasporediti Menu*/
+.artikli-kruh ul {
+  justify-content: space-between;
+}
+.location-container{
+  background-color:#F5F5F5;
+  flex-direction: column;
+  margin-top: 50px;
+  display: flex; 
+   align-items: center;
+   justify-content: center;
+}
+.location-container h1{
+
+  text-align: center;
+  margin: 0;
+
+}
+#map {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 60%;
+  height: 28rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19),
+  0 6px 6px rgba(0,0,0,0.23);
+  z-index: 0;
+  border-radius: 10px;
+}
+
+
+/*tu nastavljamo za recepti.html i photoGallery.html*/
+.naslov{
+background-color:#F5F5F5;
+width: 100%;
+position: relative;
+display: inline-block;
+text-align: center;
+margin-top: 70px;
+
+
+}
+.footer-section{
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  display: flex;
+  background-color: #F5F5F5;
+  margin-bottom: 2PX;
+}
+.footer-section a{
+  text-decoration: underline darkblue double;
+  color: black;
+
+}
+#footer-logo{
+  margin-top: 30px;
+  margin-left: 300px;
+  align-items: center;
+align-content: center;
+order: 2;
+
+}
+
+#footer-logo img{
+border-radius: 50%;
+box-shadow: 0 10px 20px rgba(0,0,0,0.19),
+0 6px 6px rgba(0,0,0,0.23);
+width: 200px;
+height: 200px;
+}
+.footer-kontakti-informacije{
+  order: 1;
+  line-height: 1.8;
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.footer-kontakti-informacije ul li{
+ text-align: center;
+  flex-direction: column;
+}
+.footer-kontakti-informacije ul{
+  padding: 0;
+}
+#wrap-footer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-container{
+  border-radius: 10px;
+  font-size: 12px;
+  color: black;
+  display: flex;
+  background-color:#F5F5F5;
+  justify-content: center;
+
+}
+/* photoGallery.html*/
+.gallery{
+  width: 90%;
+  margin: 0 auto;
+  background-color: #F5F5F5;
+}
+.gallery-main{
+  width: 45 rem;
+  height: 30rem;
+  margin: 0 auto;
+}
+
+.gallery-main img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19),
+  0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+.gallery-p{  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  
+}
+
+.gallery-p img{
+  width:12rem;
+  height:10rem;
+  object-fit: cover;
+  border-radius: 4px;
+  margin:0.5rem;
+  cursor: pointer;
+}
+/*buttons gallery*/
+.gallery-prev, .gallery-next {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  width: 50px;
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.gallery-prev{
+  left:0%;
+  border-radius: 3px 0 0 3px;
+}
+/* Position the "next button" to the right */
+.gallery-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.gallery-prev:hover,
+.gallery-next:hover {
+    background-color: rgba(221, 214, 214, 0.8)!important;
+  }
+
+  /*recepti.html*/
+
+  .recepti{
+  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
+    
+    
+  }
+  .left-recipie{
+    display: block;
+    flex-wrap: wrap;
+    width: 50%;
+    height: auto;
+    background-color: #F5F5F5;
+  }
+  .left-list{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+ 
+  .recipie-list {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .right-recipie{
+    display: block; 
+    width: 49%;  
+    height: auto;  
+    background-color: #F5F5F5;
+    margin-left:8px;
+    }
+
+    .recipie-image{
+      height: 300px;
+      width: 380px;
+    }
+
+    .recipie-image img{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-left: 5px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19),
+      0 6px 6px rgba(0,0,0,0.23);
+
+    }
+ 
+
+
+
+
+  @media screen and (max-width: 768px) {
+  
+    /* Hamburger icon styling */
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      align-items: stretch;
+      width: 100vw;
+     
+    }
+    #myLinks{display: none;}
+    
+      /* Toggle show/hide for hamburger menu */
+    input:checked ~ #myLinks {
+      display: inline-block;
+      
+    }
+    
+      /* Adjustments for small screens */
+    
+      .container ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      
+         
+      }
+      .container li{
+        padding: 10px;
+      }
+    
+      .container label {
+        display: flex;
+        color: #fff;
+        background-color: #8a0000;
+        font-size: 1.2em;
+        font-style: normal;
+        padding: 10px;      
+      }
+      .logo{
+       width: 80vw;
+        margin-left: 10px ;
+        justify-content: space-between;
+           
+      }
+      #wrap-footer{
+        width: 100vw;
+        align-items: center;
+      }
+
+      .footer-container {
+        text-align: center;
+       align-items: center;
+        justify-content: center;
+      }
+      .footer-section{
+        align-items: center;
+        justify-content: center ; 
+       
+      }
+      .footer-kontakti-informacije{
+         margin-left: 0;
+      }
+
+      #footer-logo{
+        margin-left: 25%;
+      }
+
+      .zajednicki-frame{
+        flex-direction: column;
+        justify-content: center ;
+        align-items: center;
+      }
+      .slide-show{
+        width: 100vw;
+        height: 600px;
+    
+      }
+      
+      #map{
+        width: 100vw;
+      }
+    
+      .main-photo{
+       height: 600px;
+       width: 100vw;
+       margin-bottom: 0;
+      }
+      .about-container{
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+      }
+      #right-image{display: none;}
+
+      .recepti{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 100vw;
+      }
+      .left-list{
+        width:100vw;
+      }
+      .left-recipie{
+        width: 100vw;
+      }
+
+      .right-recipie{
+        width: 100vw;
+      }
+    
+    }
+    

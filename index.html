@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:wght@200&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
+    <title>Pekara Martin</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <!-- hamburger menu izbornik--> 
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger" />
+            <div id="myLinks">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#o-nama">O nama</a></li>
+                <li><a href="#menu-page">Ponuda</a></li>
+                <li><a href="#location">Lokacija</a></li>
+                <li><a href="./recepti.html">Recepti</a></li>
+                <li><a href="./photoGallery.html">Foto Galerija</a></li>
+            </ul>
+          </div>
+          
+        
+       <div class="logo">
+            <h1><a href="./index.html">Pekara Martin</a></h1>
+            <span><a href="./index.html"><img src="./photos/martin 1.jpg" class="image-logo"></a></span>
+            </div>
+          </div> 
+         
+    </nav>
+   
+    <section class="zajednicki-frame">
+    
+    <div class="main-photo">
+        
+        <img src="./photos/DSC06815.jpg">
+        <div class="main-text">
+        <h1>Dobrodošli na stranice Pekarne Martin</h1>
+        <p>Since 1995</p></div>
+    </div>
+    <div class="slide-show">
+     
+            <div class="image-box"id="imgs">
+                <img src="./photos/image (1).jpg">
+                <img src="./photos/image (2).jpg">
+                <img src="./photos/image (3).jpg">
+                <img src="./photos/image (4).jpg">
+                <img src="./photos/image (5).jpg">
+                <img src="./photos/image (6).jpg">
+                <img src="./photos/image (7).jpg">
+                <img src="./photos/image (8).jpg">
+                <img src="./photos/image (9).jpg">
+                <img src="./photos/image (10).jpg">
+            </div>
+            <!-- Next and previous buttons -->
+        <a class="prev" id="prev">&#10094;</a>
+        <a class="next"id="next">&#10095;</a> 
+      </div> 
+     </section>   
+            
+     <video id="myVideo" controls width="540" height="260">
+        <source src="./photos/Pekara Martin PROMO.mp4" type="video/mp4">
+    </video>
+   
+   
+  <section id="o-nama" class="about-container">
+    <h2>O NAMA</h2>
+    <article class="text-about">
+    <p><img src="./photos/image (16).jpg" id="right-image"  >
+        S osjećajem ponosa i predanosti, želimo vam predstaviti našu priču – priču o Martinu i našoj obitelji te našoj zanatskoj pekari koja je svoja vrata otvorila u srcu Zagreba 1996. godine.
+
+Martin, glava naše obitelji, odlučio je tada krenuti putem zanatskog pekarstva s vizijom stvaranja kvalitetnih, ukusnih proizvoda s domaćim okusima i tradicionalnim recepturama. Njegova strast prema pečenju i ljubav prema stvaranju autentičnih okusa postavili su temelje naše pekare, a te vrijednosti traju i danas.
+
+Naša pekara je mjesto gdje svaki zalogaj predstavlja spoj tradicije i ljubavi prema hrskavim koricama i mekanim unutrašnjostima. S ponosom istražujemo i očuvavamo stare obiteljske recepture, osiguravajući da svaki komad našeg kruha i peciva ima okus pravog doma.
+
+Od tada do danas, naša pekara ostaje posvećena ručnom radu i majstorskoj izradi, donoseći vam svježe proizvode svakog jutra. Kroz godine, naša obitelj je rasla, ali naša strast za stvaranjem najfinijih pekarskih proizvoda ostala je nepromijenjena.
+
+Dobrodošli u Martinovu pekaru, gdje svaki zalogaj ima okus tradicije, topline i obitelji. Hvala vam što ste s nama na ovom ukusnom putovanju!
+    </p>
+    </article>
+  
+    
+
+</section>
+<section id="menu-page" class="menu-container">
+    <h1>PONUDA</h1>
+    <div class="menu">
+        <article class="artikli-kruh">
+        <h2>Kruh</h2>
+        
+         <ul>
+          <br>
+          <li>Bijeli</li>
+          <li>Polubijeli</li>
+          <li>Bakin</li>
+          <li>Kukuruzni</li>
+          <li>Domaća pogača</li>
+          <li>Francuz</li>
+          <li>Kukuruzni baguette</li>
+          <li>Lički okrugli</li>
+          <li>Bučin</li>
+          <li>Suncokretov</li>
+          <li>Ciabatta</li>
+        </ul>
+</article>
+
+
+
+    </div>
+</section>
+<!-- section where i will put the bakery location-->
+<section id="location" class="location-container">
+  <h1>Naša lokacija:</h1>
+ 
+    <div id="map"></div>
+    <p>Adresa: Bijenička cesta 166, 10000 Zagreb.</p>
+
+</section>
+<!--footer sekcija gdje imamo informacije o kontaktima, društven mreže itd..-->
+<section class="footer-section">
+  <div id="wrap-footer">
+  <div id="footer-logo"><a href="./index.html"><img src="./photos/martin 1.jpg" ></a>
+    </div><div class="footer-kontakti-informacije">
+      <ul>
+        <li>Kontakt</li>
+        <li>T: +385989693489</li>
+        <li><a href="mailto:pekaramartin.dostava@gmail.com">E: pekaramartin.dostava@gmail.com</a></li>
+        
+      </ul>
+
+    </div>
+    <div class="footer-kontakti-informacije">
+      <ul>
+        <li>Informacije</li>
+        <li>Pekara Martin</li>
+        <li>Bijenička cesta 166</li>
+        <li>10 000 Zagreb</li>
+        <li>Hrvatska</li>
+      </ul>
+  </div>
+</div>
+</section>
+<footer class="footer-container">
+    <p>2023 © Pekara Martin. Sva prava pridržana. Created by Anton Kolnrekaj</p>
+</footer>
+
+<script src="./script.js"></script>    
+</body>
+</html>
